@@ -1,6 +1,6 @@
 # Password Manager
 
-> Offline console-based credential vault with military-grade encryption. Zero cloud, zero DB, zero BS.
+> Console-based credential management system with industry-standard encryption. Operates entirely offline without external dependencies.
 
 ![Python](https://img.shields.io/badge/python-3.8+-blue) ![Status](https://img.shields.io/badge/status-production-brightgreen)
 
