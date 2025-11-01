@@ -205,25 +205,8 @@ pip install bcrypt cryptography
 
 ---
 
-## Testing Checklist
-
-- [x] First-run password creation with validation
-- [x] Login with 3-attempt limit
-- [x] Add credential with duplicate detection
-- [x] View all with decryption
-- [x] Search by website/username with reveal
-- [x] Edit with selective field update
-- [x] Delete with confirmation
-- [x] Encryption/decryption roundtrip
-- [x] File corruption handling
-- [x] Permission error handling
-
----
-
 ## Notes
 
-- No database required (JSON file storage)
-- No internet connection needed (fully offline)
-- No external services (local-only operation)
+- Fully offline (no DB, no internet, no external services)
 - Master password unrecoverable by design (security feature)
-- Credentials never transmitted or logged
+- All tests passed: Auth, CRUD, encryption, error handling
