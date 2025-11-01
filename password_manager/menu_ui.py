@@ -95,14 +95,16 @@ class MenuUI:
 
         # Column widths
         website_width = 20
-        username_width = 25
-        password_width = 30
+        username_width = 20
+        password_width = 20
+        created_width = 25
+        updated_width = 25
 
         # Print header
         print()
         print("====== YOUR CREDENTIALS ======")
-        print(f"{'Website':<{website_width}} | {'Username':<{username_width}} | {'Password':<{password_width}}")
-        print("-" * 75)
+        print(f"{'Website':<{website_width}} | {'Username':<{username_width}} | {'Password':<{password_width}} | {'Created (YY-MM-DD HH:MM)':<{created_width}} | {'Updated (YY-MM-DD HH:MM)':<{updated_width}}")
+        print("-" * 130)
 
         # Print rows
         for credential in credentials:
@@ -114,9 +116,12 @@ class MenuUI:
             else:
                 password = self._truncate(credential.get('decrypted_password', '****'), password_width)
 
-            print(f"{website:<{website_width}} | {username:<{username_width}} | {password:<{password_width}}")
+            created = self._format_timestamp(credential.get('created_at', 'N/A'))
+            updated = self._format_timestamp(credential.get('updated_at', 'N/A'))
 
-        print("-" * 75)
+            print(f"{website:<{website_width}} | {username:<{username_width}} | {password:<{password_width}} | {created:<{created_width}} | {updated:<{updated_width}}")
+
+        print("-" * 130)
         print(f"Total: {len(credentials)} credential{'s' if len(credentials) != 1 else ''}")
         print()
 
@@ -292,3 +297,29 @@ class MenuUI:
         if len(text) > width:
             return text[:width-3] + "..."
         return text
+
+    @staticmethod
+    def _format_timestamp(timestamp):
+        """
+        Format ISO timestamp to a more readable format
+
+        Args:
+            timestamp (str): ISO timestamp string (YYYY-MM-DDTHH:MM:SS)
+
+        Returns:
+            str: Formatted timestamp (YYYY-MM-DD HH:MM)
+        """
+        if not timestamp or timestamp == 'N/A':
+            return 'N/A'
+        
+        try:
+            # Format: 2024-01-15T14:30:45 -> 2024-01-15 14:30
+            parts = timestamp.split('T')
+            if len(parts) == 2:
+                date = parts[0]
+                time = parts[1].split(':')[:2]  # Take only hours and minutes
+                return f"{date} {':'.join(time)}"
+            return timestamp
+        except Exception:
+            return timestamp
+            
