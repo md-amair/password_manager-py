@@ -20,14 +20,14 @@
    - Menu loop coordinator
 
 2. **AuthenticationManager** - Access control
-   - Master password verification (bcrypt)
-   - First-run password creation
-   - 3-attempt retry policy
+   - Master password verification using bcrypt
+   - Initial password creation workflow
+   - Three-attempt authentication policy
 
-3. **EncryptionHandler** - Crypto engine
-   - Fernet symmetric encryption
-   - PBKDF2HMAC key derivation (100k iterations)
-   - Random 16-byte salt per password
+3. **EncryptionHandler** - Cryptographic operations
+   - Fernet symmetric encryption algorithm
+   - PBKDF2HMAC key derivation with 100,000 iterations
+   - Random 16-byte salt generated per password
 
 4. **CredentialStore** - Persistence layer
    - JSON file I/O
