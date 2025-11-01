@@ -62,14 +62,14 @@ Startup → Auth (bcrypt) → Menu Loop → Operations → Persist (JSON) → Ex
 
 ## Error Handling
 
-**Graceful Degradation Strategy:**
-- File I/O: Catches `FileNotFoundError`, `PermissionError`, `IOError`
-- Parsing: Catches `json.JSONDecodeError` → "File corrupted" message
-- Crypto: Catches `InvalidToken` → Decryption failure handling
-- Input: Validates all user input, trims whitespace, enforces constraints
-- Auth: 3-strike policy, then exit
+**Exception Management:**
+- File I/O: Handles `FileNotFoundError`, `PermissionError`, `IOError`
+- Parsing: Handles `json.JSONDecodeError` with file corruption notification
+- Cryptography: Handles `InvalidToken` for decryption failures
+- Input: Validates all user input, normalizes whitespace, enforces constraints
+- Authentication: Three-attempt limit with session termination
 
-**User-Facing:** Friendly messages, no stack traces, actionable suggestions
+**User Interface:** Descriptive error messages without stack traces, actionable guidance provided
 
 ## Programming Concepts
 
