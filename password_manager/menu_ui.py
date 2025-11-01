@@ -94,7 +94,7 @@ class MenuUI:
             return
 
         # Column widths
-        website_width = 20
+        website_width = 25
         username_width = 20
         password_width = 20
         created_width = 25
@@ -139,7 +139,7 @@ class MenuUI:
             return
 
         # Column widths
-        website_width = 20
+        website_width = 25
         username_width = 25
         password_width = 30
 
