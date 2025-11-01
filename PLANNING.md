@@ -2,11 +2,11 @@
 
 ## Core Specifications
 
-**Type:** Console-based credential manager
-**Language:** Python 3.8+
-**Architecture:** OOP (5 classes)
-**Storage:** JSON file (local, no DB)
-**Security:** bcrypt (master) + Fernet (credentials)
+**Type:** Console-based credential management system
+**Language:** Python 3.8 or higher
+**Architecture:** Object-oriented design with five classes
+**Storage:** Local JSON file without database requirements
+**Security:** bcrypt for master password, Fernet for credential encryption
 
 ---
 
