@@ -100,26 +100,26 @@
 ## Security Implementation
 
 ### Master Password
-- Algorithm: bcrypt with auto-generated salt
-- Storage: Hashed only, never plaintext
-- Validation: 3 failed attempts → exit
+- Algorithm: bcrypt with automatically generated salt
+- Storage: Hashed representation only, never plaintext
+- Validation: Session termination after three failed attempts
 
 ### Credential Encryption
 - Algorithm: Fernet (AES-128 in CBC mode)
-- Key Derivation: PBKDF2HMAC-SHA256, 100k iterations
+- Key Derivation: PBKDF2HMAC-SHA256 with 100,000 iterations
 - Salt: 16 random bytes per password (prepended to ciphertext)
-- Encoding: Base64 for JSON storage
+- Encoding: Base64 encoding for JSON storage compatibility
 
 ### File Permissions
-- chmod 600 (owner read/write only) on Unix-like systems
-- Graceful degradation on Windows
+- Unix-like systems: chmod 600 (owner read/write exclusively)
+- Windows: Graceful degradation with available permission constraints
 
 ---
 
 ## Error Handling
 
-**Exceptions Caught:** FileNotFoundError, PermissionError, json.JSONDecodeError, InvalidToken, ValueError
-**Policy:** User-friendly messages, no stack traces, actionable guidance
+**Exceptions Managed:** FileNotFoundError, PermissionError, json.JSONDecodeError, InvalidToken, ValueError
+**Implementation Policy:** Descriptive user messages, stack trace suppression, actionable guidance provision
 
 ---
 
