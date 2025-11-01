@@ -73,20 +73,20 @@ Startup → Auth (bcrypt) → Menu Loop → Operations → Persist (JSON) → Ex
 
 ## Programming Concepts
 
-**OOP:** Encapsulation, separation of concerns, dependency injection
-**Patterns:** Controller, Strategy, Template method
-**Security:** Defense in depth, least privilege, fail-safe defaults
-**Data:** Dicts (credentials), lists (collections), UUIDs (identifiers)
-**Functional:** Pure functions, immutability, side-effect isolation
+**Object-Oriented Programming:** Encapsulation, separation of concerns, dependency injection
+**Design Patterns:** Controller pattern, Strategy pattern, Template method pattern
+**Security Principles:** Defense in depth, principle of least privilege, fail-safe defaults
+**Data Structures:** Dictionaries for credentials, lists for collections, UUIDs for unique identifiers
+**Functional Programming:** Pure functions, immutability constraints, side-effect isolation
 
-## Stats
+## Project Metrics
 
 ```
-LOC:        1,084 lines
-Files:      7 modules
-Classes:    5 (OOP design)
-Operations: 6 (Add/View/Search/Edit/Delete/Exit)
-Security:   2-layer (bcrypt + Fernet)
+Lines of Code:     1,084
+Modules:           7
+Classes:           5
+Operations:        6 (Add, View, Search, Edit, Delete, Exit)
+Security Layers:   2 (bcrypt master password + Fernet credential encryption)
 ```
 
 ## License
