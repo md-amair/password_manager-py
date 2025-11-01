@@ -44,14 +44,14 @@
 ## Operations
 
 ### 1. Authentication Flow
-- **First Run:** Create master password (8+ chars, confirm, bcrypt hash)
-- **Login:** Verify password (3 attempts max, then exit)
-- **Storage:** Hash stored in credentials.json
+- **First Run:** Create master password (8 or more characters, confirmation required, bcrypt hashing)
+- **Login:** Verify password (maximum three attempts, then session termination)
+- **Storage:** Hash stored in credentials.json file
 
 ### 2. Add Credential
-- **Input:** Website (1-100 chars), Username (1-100 chars), Password (1-500 chars)
-- **Process:** Validate → Check duplicates (warn) → Encrypt password → Generate UUID → Save
-- **Storage:** JSON with encrypted_password, created_at, updated_at timestamps
+- **Input:** Website (1-100 characters), Username (1-100 characters), Password (1-500 characters)
+- **Process:** Validate input, check for duplicates with warning, encrypt password, generate UUID, save to storage
+- **Storage:** JSON format with encrypted_password, created_at, and updated_at timestamps
 
 ### 3. View Credentials
 - **Flow:** Load JSON → Decrypt all passwords → Display table format
