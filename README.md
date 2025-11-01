@@ -73,30 +73,11 @@ Startup → Auth (bcrypt) → Menu Loop → Operations → Persist (JSON) → Ex
 
 ## Programming Concepts
 
-**OOP Principles:**
-- Encapsulation (private methods, data hiding)
-- Separation of concerns (single responsibility per class)
-- Dependency injection (configurable class instances)
-
-**Security Patterns:**
-- Defense in depth (multi-layer encryption)
-- Principle of least privilege (file permissions)
-- Fail-safe defaults (secure-by-default operations)
-
-**Design Patterns:**
-- Controller pattern (PasswordManager orchestrates)
-- Strategy pattern (encryption/storage abstracted)
-- Template method (reusable UI components)
-
-**Data Structures:**
-- Dictionaries for credential objects
-- Lists for credential collections
-- UUID for unique identifiers
-
-**Functional Concepts:**
-- Pure functions (encryption/decryption)
-- Immutability (created_at timestamp)
-- Side-effect isolation (I/O separated)
+**OOP:** Encapsulation, separation of concerns, dependency injection
+**Patterns:** Controller, Strategy, Template method
+**Security:** Defense in depth, least privilege, fail-safe defaults
+**Data:** Dicts (credentials), lists (collections), UUIDs (identifiers)
+**Functional:** Pure functions, immutability, side-effect isolation
 
 ## Stats
 
