@@ -38,18 +38,18 @@ Startup → Auth (bcrypt) → Menu Loop → Operations → Persist (JSON) → Ex
 
 ## Architecture
 
-**OOP Design:** 5-class modular architecture
-- `PasswordManager` - Orchestrator, handles CRUD
+**Object-Oriented Design:** Five-class modular architecture
+- `PasswordManager` - Application orchestrator, manages CRUD operations
 - `AuthenticationManager` - Master password validation
-- `EncryptionHandler` - Fernet+PBKDF2 crypto ops
-- `CredentialStore` - JSON file I/O
-- `MenuUI` - Console interface & display
+- `EncryptionHandler` - Fernet and PBKDF2 cryptographic operations
+- `CredentialStore` - JSON file input/output operations
+- `MenuUI` - Console interface and presentation layer
 
-**Security Stack:**
-- Master password: bcrypt adaptive hashing
+**Security Implementation:**
+- Master password: bcrypt adaptive hashing algorithm
 - Credentials: Fernet (AES-128) symmetric encryption
-- Key derivation: PBKDF2HMAC (100k iterations, 16-byte salt/password)
-- Storage: Base64-encoded encrypted data in JSON
+- Key derivation: PBKDF2HMAC with 100,000 iterations and 16-byte salt per password
+- Storage format: Base64-encoded encrypted data in JSON structure
 
 ## Dependencies
 
