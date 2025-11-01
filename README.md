@@ -6,7 +6,7 @@
 
 ## Overview
 
-Secure password management CLI built on OOP principles. Implements bcrypt+Fernet dual-layer encryption for local credential storage. Master password authentication gates access to full CRUD operations on encrypted credentials stored in JSON.
+Secure password management command-line interface built on object-oriented programming principles. Implements bcrypt and Fernet dual-layer encryption for local credential storage. Master password authentication provides controlled access to full CRUD operations on encrypted credentials stored in JSON format.
 
 ## Quick Start
 
