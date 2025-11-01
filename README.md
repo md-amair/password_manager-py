@@ -82,7 +82,7 @@ Startup → Auth (bcrypt) → Menu Loop → Operations → Persist (JSON) → Ex
 ## Project Metrics
 
 ```
-Lines of Code:     1,084
+Lines of Code:     1,000 approx
 Modules:           7
 Classes:           5
 Operations:        6 (Add, View, Search, Edit, Delete, Exit)
