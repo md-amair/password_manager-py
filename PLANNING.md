@@ -118,15 +118,8 @@
 
 ## Error Handling
 
-| Error Type | Exception | User Message |
-|------------|-----------|--------------|
-| File not found | FileNotFoundError | "No credentials saved yet" |
-| File corrupted | json.JSONDecodeError | "Credentials file corrupted. Restore from backup." |
-| Permission denied | PermissionError | "Cannot read/write file. Check permissions." |
-| Decryption failed | InvalidToken | "Error decrypting password for [website]" |
-| Invalid input | ValueError | Field-specific validation message |
-
-**Policy:** Never expose stack traces. Always provide actionable guidance.
+**Exceptions Caught:** FileNotFoundError, PermissionError, json.JSONDecodeError, InvalidToken, ValueError
+**Policy:** User-friendly messages, no stack traces, actionable guidance
 
 ---
 
