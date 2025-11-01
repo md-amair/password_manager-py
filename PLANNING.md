@@ -54,26 +54,26 @@
 - **Storage:** JSON format with encrypted_password, created_at, and updated_at timestamps
 
 ### 3. View Credentials
-- **Flow:** Load JSON → Decrypt all passwords → Display table format
-- **Output:** Website (20), Username (25), Password (30) columns with truncation
-- **Error:** Handle decryption failures gracefully
+- **Flow:** Load JSON data, decrypt all passwords, display in table format
+- **Output:** Website (20 char), Username (25 char), Password (30 char) columns with truncation
+- **Error Handling:** Manage decryption failures appropriately
 
 ### 4. Search Credentials
-- **Input:** Search type (1=Website, 2=Username) + search term
-- **Process:** Case-insensitive substring match → Decrypt → Display masked
-- **Reveal:** Prompt per credential to show plaintext password
+- **Input:** Search type selection (1=Website, 2=Username) and search term
+- **Process:** Case-insensitive substring matching, decryption, masked display
+- **Reveal:** Individual prompt per credential to display plaintext password
 
-### 5. Edit Credential ⭐
-- **Flow:** Select from list → Show current values → Prompt for new (blank=keep) → Re-encrypt if changed → Update timestamp
-- **Fields:** Website, Username, Password (selective update)
-- **Validation:** Same constraints as Add operation
+### 5. Edit Credential
+- **Flow:** Selection from list, display current values, prompt for updates (blank preserves existing), re-encrypt if modified, update timestamp
+- **Fields:** Website, Username, Password (selective field updates)
+- **Validation:** Identical constraints as Add operation
 
 ### 6. Delete Credential
-- **Flow:** Select from list → Show full details (decrypted) → Confirm → Remove → Clear screen
-- **Confirmation:** Case-insensitive yes/no, default to no
+- **Flow:** Selection from list, display complete details with decrypted password, confirmation required, removal, screen clearing
+- **Confirmation:** Case-insensitive yes/no input, defaults to negative
 
 ### 7. Exit
-- **Action:** Display goodbye message, clean shutdown
+- **Action:** Display termination message, clean application shutdown
 
 ---
 
