@@ -125,8 +125,8 @@
 
 ## Menu Interface
 
-6-option menu (Add/View/Search/Edit/Delete/Exit)
-Input validation: Trim whitespace, accept 1-6, getpass for password masking
+Six-option menu providing Add, View, Search, Edit, Delete, and Exit operations
+Input validation: Whitespace normalization, numeric range acceptance (1-6), getpass module for password masking
 
 ---
 
