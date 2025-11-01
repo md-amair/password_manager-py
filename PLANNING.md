@@ -125,26 +125,8 @@
 
 ## Menu Interface
 
-```
-====== PASSWORD MANAGER ======
-1. Add new credential
-2. View all credentials
-3. Search credentials
-4. Edit credential
-5. Delete credential
-6. Exit
-===============================
-Enter your choice (1-6):
-```
-
-**Input Validation:**
-- Trim whitespace
-- Accept 1-6 only
-- Invalid: "Invalid choice. Please enter 1-6."
-
-**Password Input:**
-- Use getpass module (hidden input)
-- Cross-platform compatible
+6-option menu (Add/View/Search/Edit/Delete/Exit)
+Input validation: Trim whitespace, accept 1-6, getpass for password masking
 
 ---
 
